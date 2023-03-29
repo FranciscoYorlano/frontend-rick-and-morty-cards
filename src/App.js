@@ -2,21 +2,43 @@
 import { Routes, Route } from "react-router-dom";
 
 // Components
-import Alert from "./Components/Alert";
-import Footer from "./Components/Footer";
-import Nav from "./Components/Nav";
+import Alert from "./components/Alert";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 // Pages
-import About from "./Pages/About";
+import About from "./pages/About";
+import AllCards from "./pages/AllCards";
+import CardDetail from "./pages/CardDetail";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import UserCards from "./pages/UserCards";
+import UserFavorites from "./pages/UserFavorites";
 
 function App() {
+    const user = "user";
+
     return (
-        <>
+        <div>
             <Nav />
-            <div className="container bg-gray-200 min-w-full">
-                <h1>App</h1>
-            </div>
-        </>
+            <Routes>
+                <Route path="/about" element={<About />} />
+                <Route path="/cards" element={<AllCards />} />
+                <Route path={`/${user}/cards/:id`} element={<CardDetail />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="*" element={<NotFound />} />
+                <Route path="/signin" element={<SignIn />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path={`/${user}/cards`} element={<UserCards />} />
+                <Route
+                    path={`/${user}/favorites`}
+                    element={<UserFavorites />}
+                />
+            </Routes>
+            <Footer />
+        </div>
     );
 }
 
