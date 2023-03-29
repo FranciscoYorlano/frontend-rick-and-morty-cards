@@ -1,7 +1,7 @@
 function App() {
     return (
-        <div>
-            <h1>Hola mundo</h1>
+        <div className="container bg-gray-100 min-w-full">
+            <p>Hola mundo</p>
         </div>
     );
 }
