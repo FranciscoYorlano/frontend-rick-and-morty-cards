@@ -21,7 +21,7 @@ function App() {
     const user = "user";
 
     return (
-        <div>
+        <div className="bg-purple-950 text-gray-300 min-w-screen min-h-screen font-sans">
             <Nav />
             <Routes>
                 <Route path="/about" element={<About />} />
