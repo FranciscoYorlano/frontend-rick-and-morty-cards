@@ -17,12 +17,15 @@ import SignUp from "./pages/SignUp";
 import UserCards from "./pages/UserCards";
 import UserFavorites from "./pages/UserFavorites";
 
+import DropDown from "./components/DropDown";
+
 function App() {
     const user = "user";
 
     return (
         <div className="bg-purple-950 text-gray-300 min-w-screen min-h-screen antialiased ">
             <Nav />
+
             <Routes>
                 <Route path="/about" element={<About />} />
                 <Route path="/cards" element={<AllCards />} />
@@ -36,7 +39,10 @@ function App() {
                     path={`/${user}/favorites`}
                     element={<UserFavorites />}
                 />
+
+                <Route path="/dropdown" element={<DropDown />} />
             </Routes>
+
             <Footer />
         </div>
     );

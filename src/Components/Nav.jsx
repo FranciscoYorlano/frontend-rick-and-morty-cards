@@ -1,5 +1,4 @@
 // React
-// React
 import React from "react";
 
 // React router
@@ -10,25 +9,37 @@ import logo from "../assets/logo.png";
 import { VscGithub } from "react-icons/vsc";
 import { BsLinkedin } from "react-icons/bs";
 
+// Components
+import Button from "./Button";
+import SearchBar from "./SearchBar";
+
 const Nav = () => {
+    const isSignIn = true;
+
     return (
         <div
             style={{ backgroundColor: "#021518" }}
-            className="fixed w-full h-14 grid grid-cols-3"
+            className=" w-full h-14 grid grid-cols-3"
         >
             <div className="my-auto">
                 <img src={logo} alt="Rick and Morty Cards" className="h-10" />
             </div>
 
-            <div className="my-auto text-right mx-auto">
-                <button className="inline-block rounded-full  bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg hover:shadow-pink-500/50 ">
-                    <p className="text-sm leading-6 font-semibold text-slate-200 leading-6 mx-2">
-                        Sign in
-                    </p>
-                </button>
+            <div className="my-auto text-right mx-auto flex">
+                {isSignIn ? (
+                    <>
+                        <SearchBar />
+                    </>
+                ) : (
+                    <>
+                        <div className="mx-2 flex">
+                            <Button label="Sign in" />
+                        </div>
+                    </>
+                )}
             </div>
             <div className="items-center ml-auto flex mr-5">
-                <nav className="text-sm leading-6 font-semibold text-slate-700 text-slate-200">
+                <nav className="text-sm leading-6 font-semibold text-slate-200">
                     <ul className="flex space-x-8">
                         <li>
                             <Link
@@ -65,7 +76,11 @@ const Nav = () => {
                         <VscGithub size="1.5em" className="" />
                     </Link>
 
-                    <Link to="" className="hover:text-sky-500 mx-2 block">
+                    <Link
+                        to="https://www.linkedin.com/in/francisco-yorlano"
+                        target="blanc"
+                        className="hover:text-sky-500 mx-2 block"
+                    >
                         <BsLinkedin size="1.5em" className="" />
                     </Link>
                 </div>
