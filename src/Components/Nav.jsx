@@ -33,7 +33,9 @@ const Nav = () => {
                 ) : (
                     <>
                         <div className="mx-2 flex">
-                            <Button label="Sign in" />
+                            <Link to="/signin">
+                                <Button label="Sign in" />
+                            </Link>
                         </div>
                     </>
                 )}

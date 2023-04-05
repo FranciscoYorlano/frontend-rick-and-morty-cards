@@ -31,6 +31,7 @@ const SignIn = () => {
                         <input
                             className="w-full border border-solid border-neutral-300 rounded-full text-sm font-semibold text-slate-900 leading-6 px-2 py-1"
                             placeholder="Enter your email"
+                            type="email"
                         />
                     </div>
 
@@ -92,37 +93,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-
-/*
-        <div className="h-screen w-screen grid place-items-center">
-            <div class="block rounded-lg p-6 shadow-lg">
-                <form>
-                    <div class="relative my-3">
-                        <input
-                            type="email"
-                            className="w-60 rounded-full ext-sm font-semibold text-slate-900 leading-6 px-2 py-1"
-                            name="email"
-                            id="email"
-                            placeholder="email"
-                        />
-                    </div>
-                    <div class="relative my-3">
-                        <input
-                            type="password"
-                            className="w-60 rounded-full ext-sm font-semibold text-slate-900 leading-6 px-2 py-1"
-                            name="password"
-                            id="password"
-                            placeholder="password"
-                        />
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="my-3 inline-block w-full transition duration-150 ease-in-out"
-                    >
-                        
-                    </button>
-                </form>
-            </div>
-        </div>
-*/
