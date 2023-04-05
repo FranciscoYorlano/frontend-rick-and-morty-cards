@@ -1,7 +1,11 @@
 import React from "react";
 
 const SignUp = () => {
-    return <div>SignUp</div>;
+    return (
+        <div>
+            <div className="h-screen w-screen grid place-items-center"></div>
+        </div>
+    );
 };
 
 export default SignUp;

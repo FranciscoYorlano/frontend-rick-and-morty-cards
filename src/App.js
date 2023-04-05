@@ -1,6 +1,10 @@
 // React router
 import { Routes, Route } from "react-router-dom";
 
+// Hooks
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 // Components
 import Alert from "./components/Alert";
 import Footer from "./components/Footer";
@@ -14,17 +18,33 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import UserCards from "./pages/UserCards";
 import UserFavorites from "./pages/UserFavorites";
 
 import DropDown from "./components/DropDown";
 
 function App() {
     const user = "user";
+    // =========== state
+    const [isSignIn, setIsSignIn] = useState(true);
+
+    // =========== hooks
+    const navigate = useNavigate();
+
+    // =========== handlers
+
+    // Sign In
+
+    // Sign Up
+
+    // Add favorite
+
+    // Remove favorite
+
+    //
 
     return (
-        <div className="bg-purple-950 text-gray-300 min-w-screen min-h-screen antialiased ">
-            <Nav />
+        <div className="bg-slate-100 text-black">
+            {isSignIn ? <Nav /> : navigate("/signin")}
 
             <Routes>
                 <Route path="/about" element={<About />} />
@@ -34,7 +54,6 @@ function App() {
                 <Route path="*" element={<NotFound />} />
                 <Route path="/signin" element={<SignIn />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path={`/${user}/cards`} element={<UserCards />} />
                 <Route
                     path={`/${user}/favorites`}
                     element={<UserFavorites />}

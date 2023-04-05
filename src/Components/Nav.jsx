@@ -14,7 +14,7 @@ import Button from "./Button";
 import SearchBar from "./SearchBar";
 
 const Nav = () => {
-    const isSignIn = true;
+    const isSignIn = false;
 
     return (
         <div
@@ -67,7 +67,7 @@ const Nav = () => {
                         </li>
                     </ul>
                 </nav>
-                <div className="flex items-center border-l border-slate-800 ml-6 pl-6">
+                <div className="flex items-center border-l text-slate-200 border-slate-800 ml-6 pl-6">
                     <Link
                         to="https://github.com/FranciscoYorlano"
                         target="blanc"
