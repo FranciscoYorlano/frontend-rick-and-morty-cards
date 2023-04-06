@@ -20,7 +20,7 @@ const SignIn = () => {
 
     return (
         <div className="h-screen w-screen grid place-items-center">
-            <div className="w-1/3 px-10 py-20 rounded-3xl border-solid border-gray-500">
+            <div className="w-1/3">
                 <h1 className="text-4xl font-semibold">Welcome Back</h1>
                 <p className="font-medium text-md text-gray-500 mt-2">
                     Welcome back! Please enter you details.

@@ -20,7 +20,7 @@ const SignUp = () => {
 
     return (
         <div className="h-screen w-screen grid place-items-center">
-            <div className="w-1/3 px-10 rounded-3xl border-solid border-gray-500">
+            <div className="w-1/3 ">
                 <h1 className="text-4xl font-semibold">Create your account</h1>
                 <p className="font-medium text-md text-gray-500 mt-2">
                     Welcome to Rick and Morty Cards
@@ -99,7 +99,7 @@ const SignUp = () => {
                         </button>
                         <div className="flex justify-center mt-1">
                             <Link
-                                to="/forgot-password"
+                                to="/about"
                                 className="text-sm text-blue-500 hover:text-blue-700"
                             >
                                 Why should create an account?
@@ -111,7 +111,7 @@ const SignUp = () => {
                             Have an account?
                         </p>
                         <Link
-                            to="/signup"
+                            to="/signin"
                             className="ml-1 font-medium text-base hover:text-sky-500 text-sky-600"
                         >
                             Sign in
