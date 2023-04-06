@@ -78,14 +78,9 @@ const characters = [
 
 const AllCards = () => {
     return (
-        <div className="flex flex-wrap justify-center ">
+        <div className="grid grid-cols-5 gap-4 place-items-center">
             {characters.map((char) => (
-                <div
-                    key={char.id}
-                    className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/5 p-2"
-                >
-                    <Card char={char} />
-                </div>
+                <Card key={char.id} char={char} />
             ))}
         </div>
     );
