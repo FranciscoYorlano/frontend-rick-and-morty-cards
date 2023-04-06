@@ -43,7 +43,7 @@ const characters = [
 
 const AllCards = () => {
     return (
-        <div className="max-w-screen">
+        <div className="max-w-screen m-5">
             {characters.map((char) => (
                 <div key={char.id} className="my-2">
                     <Card char={char} />
