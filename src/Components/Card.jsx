@@ -8,11 +8,11 @@ const Card = (props) => {
 
     return (
         <div class="w-64 bg-gradient-to-r from-purple-500 to-pink-500 border border-gray-200 rounded-lg m-none">
-            <Link to={`detail/${id}`}>
+            <Link to={`/detail/${id}`}>
                 <img class="rounded-t-lg" src={image} alt={name} />
             </Link>
             <div class="p-5">
-                <Link to={`detail/${id}`}>
+                <Link to={`/detail/${id}`}>
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {name}
                     </h5>

@@ -49,7 +49,7 @@ function App() {
             <Routes>
                 <Route path="/about" element={<About />} />
                 <Route path="/cards" element={<AllCards />} />
-                <Route path={`/${user}/cards/:id`} element={<CardDetail />} />
+                <Route path={`/detail/:id`} element={<CardDetail />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="*" element={<NotFound />} />
                 <Route path="/signin" element={<SignIn />} />

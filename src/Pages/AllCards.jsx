@@ -43,7 +43,7 @@ const characters = [
 
 const AllCards = () => {
     return (
-        <div className="w-screen grid grid-flow-dense justify-items-center m-5">
+        <div className="max-w-screen">
             {characters.map((char) => (
                 <div key={char.id} className="my-2">
                     <Card char={char} />
