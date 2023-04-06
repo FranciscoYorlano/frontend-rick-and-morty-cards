@@ -69,7 +69,7 @@ const characters = [
     },
     {
         id: 9,
-        name: "Beth Smith",
+        name: "Beth Smith SJDJSKFKJ djsjs",
         species: "Human",
         gender: "Female",
         image: "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
@@ -78,7 +78,7 @@ const characters = [
 
 const AllCards = () => {
     return (
-        <div className="grid grid-cols-5 gap-4 place-items-center">
+        <div className="grid grid-cols-4 gap-3 place-items-center mt-5">
             {characters.map((char) => (
                 <Card key={char.id} char={char} />
             ))}

@@ -29,7 +29,7 @@ const Card = (props) => {
     const handleClose = () => {};
 
     return (
-        <div className="relative w-48 bg-gradient-to-r from-purple-500 to-pink-500 border border-gray-200 rounded-lg m-none text-center text-slate-200">
+        <div className="relative w-64 bg-gradient-to-r from-purple-500 to-pink-500 border border-gray-200 rounded-lg m-none text-center text-slate-200">
             <div className="absolute top-0 left-0 z-10 w-full  flex justify-end items-baseline">
                 <div className="flex items-center text-sm leading-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 rounded-bl-md rounded-tr-md">
                     <AiOutlineIdcard className="inline-flex" size="1.5rem" />
@@ -42,18 +42,28 @@ const Card = (props) => {
             </Link>
             <div className="p-5">
                 <Link to={`/detail/${id}`}>
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight">
+                    <h5 className="mb-2 h-24 text-2xl font-bold tracking-tight">
                         {name}
                     </h5>
+                    <div className="mb-2"></div>
                 </Link>
-                <p className="flex items-center my-2 text-sm leading-6 font-normal">
-                    <GiBackPain className="inline-flex" size="1.5rem" />
-                    <span class="text-base ml-1">{species}</span>
-                </p>
-                <p className="flex items-center my-2 text-sm leading-6 pb-2 font-normal border-b border-solid">
-                    <GiAnatomy className="inline-flex" size="1.5rem" />
-                    <span class="text-base ml-1">{gender}</span>
-                </p>
+                <div className="flex justify-between border-b border-solid pb-2">
+                    <p
+                        className="flex items-center my-2 text-sm leading-6 font-normal"
+                        style={{ flexBasis: "45%" }}
+                    >
+                        <GiBackPain className="inline-flex" size="1.5rem" />
+                        <span className="text-base ml-1">{species}</span>
+                    </p>
+                    <p
+                        className="flex items-center my-2 text-sm leading-6 font-normal"
+                        style={{ flexBasis: "45%" }}
+                    >
+                        <GiAnatomy className="inline-flex" size="1.5rem" />
+                        <span className="text-base ml-1">{gender}</span>
+                    </p>
+                </div>
+
                 <div className="flex items-center mt-2 text-sm leading-6 font-normal">
                     <button onClick={() => handleFavorite()}>
                         {isFav ? (
